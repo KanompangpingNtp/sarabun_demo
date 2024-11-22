@@ -20,7 +20,8 @@
                 <td>{{ $receivedbook->received_date}}</td>
                 <td>{{ $receivedbook->subject}}</td>
                 <td>
-                    <a href="{{ route('viewFile', $receivedbook->id) }}" class="btn btn-info"><i class="bi bi-eye"></i></a>
+                    {{-- <a href="{{ route('viewFile', $receivedbook->id) }}" class="btn btn-info"><i class="bi bi-eye"></i></a> --}}
+                    <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
                 </td>
             </tr>
             @endforeach
