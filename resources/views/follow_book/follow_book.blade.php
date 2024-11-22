@@ -32,7 +32,8 @@
                 </td>
                 <td>{{ $receivedbook->latestStatus->result_report ?? '' }}</td>
                 <td>
-                    <a href="{{ route('receivedbooks.show', $receivedbook->id) }}" class="btn btn-info"><i class="bi bi-eye"></i></a>
+                    {{-- <a href="{{ route('receivedbooks.show', $receivedbook->id) }}" class="btn btn-info"><i class="bi bi-eye"></i></a> --}}
+                    <a href="" class="btn btn-info"><i class="bi bi-eye"></i></a>
                 </td>
             </tr>
             @endforeach
