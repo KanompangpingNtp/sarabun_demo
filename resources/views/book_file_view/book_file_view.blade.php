@@ -13,6 +13,7 @@
     @endphp
 
     <div>
+        <a href="{{ route('bookfile')}}" class="btn btn-primary">กลับหน้าเดิม</a>
         <button class="btn btn-primary" id="stamp-btn">แสตม</button>
         <button class="btn btn-primary" id="download-btn">ดาวน์โหลด PDF</button>
 

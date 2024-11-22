@@ -115,8 +115,8 @@
                 </div>
 
                 <!-- แนบไฟล์ PDF -->
-                <div class="form-group mb-3 col-md-10">
-                    <label for="pdf_file">แนบไฟล์ PDF</label>
+                <div class="form-group mb-3 col-md-10 d-flex align-items-center">
+                    <label for="pdf_file" class="col-md-3">แนบไฟล์ PDF</label>
                     <input type="file" id="pdf_file" name="pdf_file[]" class="form-control" accept="application/pdf" multiple>
                 </div>
 
