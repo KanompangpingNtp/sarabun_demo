@@ -12,6 +12,13 @@
     $fileExists = $pdfFile ? file_exists(storage_path('app/public/' . $pdfFile)) : false;
     @endphp
 
+     <!-- Loading Spinner -->
+     <div id="loading-spinner" style="display: flex; justify-content: center; align-items: center; height: 100vh; position: fixed; top: 0; left: 0; width: 100%; background-color: rgba(255, 255, 255, 0.8); z-index: 1000;">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
     <div>
         <a href="{{ route('bookfile')}}" class="btn btn-primary">กลับหน้าเดิม</a>
         <button class="btn btn-primary" id="stamp-btn">แสตม</button>
@@ -34,6 +41,20 @@
     <script>
         const pdfUrl = "{{ $pdfPath }}";
         const stampImageUrl = "{{ asset('stamp_png/book4.png') }}"; // เส้นทางของภาพ PNG ที่จะใช้เป็นแสตมป์
+
+        // Loading spinner
+        const loadingSpinner = document.getElementById('loading-spinner');
+
+        // Hide spinner once document is loaded
+        window.onload = () => {
+            pdfjsLib.getDocument(pdfUrl).promise.then((pdfDoc_) => {
+                loadingSpinner.style.display = 'none'; // Hide spinner
+                // Add PDF loading logic here
+            }).catch((error) => {
+                loadingSpinner.style.display = 'none'; // Hide spinner even if there's an error
+                console.error("Error loading PDF:", error);
+            });
+        };
 
         let pdfDoc = null
             , pageNum = 1
