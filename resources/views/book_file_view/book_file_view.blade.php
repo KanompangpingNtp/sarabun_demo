@@ -20,9 +20,9 @@
     </div>
 
     <div class="text-center">
-        <a href="{{ route('bookfile')}}" class="btn btn-primary"><i class="bi bi-arrow-left-square"></i></a>
-        <button class="btn btn-primary" id="stamp-btn"><i class="bi bi-postage"></i></button>
-        <button class="btn btn-primary" id="download-btn"><i class="bi bi-floppy"></i></button>
+        <a href="{{ route('bookfile')}}" class="btn btn-primary">กลับหน้าหลัก</a>
+        <button class="btn btn-primary" id="stamp-btn">แสตม</button>
+        <button class="btn btn-primary" id="download-btn">บันทึก</button>
 
     </div>
 

@@ -59,7 +59,7 @@
 
                 @php
                 use Carbon\Carbon;
-                $today = Carbon::now()->format('Y-m-d'); // แปลงวันที่ปัจจุบันให้อยู่ในรูปแบบ yyyy-mm-dd
+                $today = Carbon::now()->format('Y-m-d');
                 @endphp
 
                 <div class="row">
@@ -119,7 +119,6 @@
                     <label for="pdf_file" class="col-md-3">แนบไฟล์ PDF</label>
                     <input type="file" id="pdf_file" name="pdf_file[]" class="form-control" accept="application/pdf" multiple>
                 </div>
-
 
                 <!-- ปุ่มบันทึก -->
                 <div class="mb-3">
